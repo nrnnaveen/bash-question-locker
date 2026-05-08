@@ -1,4 +1,4 @@
-import { unlockQuestion } from "../../../lib/store";
+import { unlockQuestion } from "../../lib/store";
 
 export default function handler(req, res) {
   if (req.method !== "POST") {

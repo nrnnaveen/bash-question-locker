@@ -1,4 +1,4 @@
-import { lockQuestion } from "../../../lib/store";
+import { lockQuestion } from "../../lib/store";
 
 export default function handler(req, res) {
   if (req.method !== "POST") {
