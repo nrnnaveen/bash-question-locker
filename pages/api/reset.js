@@ -1,4 +1,4 @@
-import { resetAllLocks } from "../../../lib/store";
+import { resetAllLocks } from "../../lib/store";
 
 export default function handler(req, res) {
   if (req.method !== "POST") {
