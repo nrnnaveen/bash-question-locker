@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0f0e0c;
+    --bg-card: #1a1814;
+    --bg-card-hover: #221f1a;
+    --accent: #f97316;
+    --accent-dim: #ea580c;
+    --accent-glow: rgba(249, 115, 22, 0.15);
+    --text-primary: #faf7f2;
+    --text-muted: #a09080;
+    --border: #2a2520;
+    --border-hover: #3d3530;
+    --locked-bg: #1a1210;
+    --locked-border: #7c2d12;
+    --available-bg: #0f1a0f;
+    --available-border: #166534;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(249, 115, 22, 0.08) 0%, transparent 60%),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 40px,
+        rgba(255,255,255,0.015) 40px,
+        rgba(255,255,255,0.015) 41px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 40px,
+        rgba(255,255,255,0.015) 40px,
+        rgba(255,255,255,0.015) 41px
+      );
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Syne', sans-serif;
+  }
+  .font-mono-custom {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .card-glow {
+    box-shadow: 0 0 0 1px var(--border), 0 4px 24px rgba(0,0,0,0.4);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .card-glow:hover {
+    box-shadow: 0 0 0 1px var(--border-hover), 0 8px 32px rgba(0,0,0,0.5), 0 0 40px var(--accent-glow);
+    transform: translateY(-2px);
+  }
+
+  .locked-card {
+    box-shadow: 0 0 0 1px var(--locked-border), 0 4px 24px rgba(0,0,0,0.4), inset 0 0 40px rgba(124, 45, 18, 0.08);
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: all 0.15s ease;
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    background: var(--accent-dim);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+    transform: translateY(-1px);
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .input-field {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--border-hover);
+    border-radius: 2px;
+  }
+}
+
+/* Staggered animations for cards */
+.question-card:nth-child(1)  { animation-delay: 0.05s; }
+.question-card:nth-child(2)  { animation-delay: 0.08s; }
+.question-card:nth-child(3)  { animation-delay: 0.11s; }
+.question-card:nth-child(4)  { animation-delay: 0.14s; }
+.question-card:nth-child(5)  { animation-delay: 0.17s; }
+.question-card:nth-child(6)  { animation-delay: 0.20s; }
+.question-card:nth-child(7)  { animation-delay: 0.23s; }
+.question-card:nth-child(8)  { animation-delay: 0.26s; }
+.question-card:nth-child(9)  { animation-delay: 0.29s; }
+.question-card:nth-child(10) { animation-delay: 0.32s; }
+.question-card:nth-child(n+11) { animation-delay: 0.35s; }
