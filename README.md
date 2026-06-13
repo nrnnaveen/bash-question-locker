@@ -45,22 +45,6 @@ npm run build
 npm start
 ```
 
----
-
-## ☁️ Deploy to Vercel (1-Click)
-
-### Option A: Vercel CLI
-```bash
-npm install -g vercel
-vercel
-```
-
-### Option B: GitHub Import
-1. Push this repo to GitHub
-2. Go to [vercel.com](https://vercel.com) → **New Project**
-3. Import your GitHub repository
-4. Click **Deploy** — done!
-
 > **Note:** No environment variables are needed. The app uses in-memory storage which resets on each Vercel function cold start. This is perfect for a single-session event.
 
 ---
