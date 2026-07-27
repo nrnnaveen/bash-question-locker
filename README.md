@@ -19,35 +19,6 @@ Participants log in, browse 20 fun acting scenarios, and lock the one they want 
 
 ---
 
-## 🚀 Quick Start (Local)
-
-```bash
-# 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/bash-session-question-locker
-cd bash-session-question-locker
-
-# 2. Install dependencies
-npm install
-
-# 3. Run dev server
-npm run dev
-
-# 4. Open in browser
-# http://localhost:3000
-```
-
----
-
-## 📦 Build for Production
-
-```bash
-npm run build
-npm start
-```
-
-> **Note:** No environment variables are needed. The app uses in-memory storage which resets on each Vercel function cold start. This is perfect for a single-session event.
-
----
 
 ## 🗂️ Project Structure
 
@@ -82,17 +53,6 @@ npm start
 ├── tailwind.config.js
 └── vercel.json
 ```
-
----
-
-## 🎨 Design System
-
-- **Theme**: Dark, moody, orange-accented
-- **Fonts**: Syne (display) + DM Sans (body) + JetBrains Mono (code)
-- **Color**: Deep charcoal background with orange (#f97316) as brand accent
-
----
-
 ## 👤 Roles
 
 | Role | Can Lock | Can Unlock Own | Can Unlock Others | Admin Panel |
@@ -101,21 +61,4 @@ npm start
 | Admin | ✅ | ✅ | ✅ (force unlock) | ✅ |
 
 ---
-
-## 📝 Notes
-
-- Storage is **in-memory** — locks reset if the server restarts
-- For a persistent single event session, this is perfectly fine
-- Auto-polls every **5 seconds** to sync across devices
-- Built with **Next.js 14 App Router** + **Pages API Routes** hybrid
-
----
-
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 14
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
-- **Toasts**: React Hot Toast
-- **Storage**: In-memory (Node.js global)
-- **Deployment**: Vercel (zero config)
+***-- Lumina Bashers***
